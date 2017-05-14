@@ -1,0 +1,23 @@
+apply plugin: 'java'
+// apply plugin: 'application'
+
+// mainClassName = ''
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.16.14"
+    testCompile "junit:junit:4.12"
+    compile group: 'com.h2database', name: 'h2', version: '1.4.194'
+    compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.4.2'
+}
+
+jar {
+    baseName = 'jee-lab1'
+    version = '0.0.1'
+}
